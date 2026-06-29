@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS-31 (Elamipretide) – Mitochondrial Peptide</title>
+    <style>
+        /* Reset and base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            color: #0b1a2f;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1a2f;
+            border-bottom: 3px solid #e6edf5;
+            padding-bottom: 0.6rem;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.6rem;
+            color: #1a324a;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+        li {
+            margin-bottom: 0.25rem;
+        }
+        .highlight-box {
+            background: #f1f6fb;
+            padding: 1.2rem 1.8rem;
+            border-radius: 16px;
+            border-left: 5px solid #2a7de1;
+            margin: 1.8rem 0;
+        }
+        .highlight-box strong {
+            color: #0b1a2f;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #dce5ef;
+            margin: 2rem 0 1.8rem;
+        }
+
+        /* ===== CTA banner below title ===== */
+        .cta-banner {
+            background: linear-gradient(135deg, #1a3d6b 0%, #2a7de1 100%);
+            color: #ffffff;
+            padding: 1rem 1.6rem;
+            border-radius: 14px;
+            margin: 1rem -2.5rem 0.6rem;
+            font-size: 0.98rem;
+            line-height: 1.55;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+        .cta-banner .cta-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.18);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .cta-banner a {
+            color: #ffe08a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-weight: 600;
+        }
+        .cta-banner a:hover {
+            color: #fff;
+        }
+
+        /* ===== Trust strip ===== */
+        .trust-strip {
+            margin: 0 -2.5rem 1.8rem;
+            padding: 0.75rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 0.9rem;
+            color: #3d5a73;
+            border-bottom: 1px solid #e6edf5;
+        }
+        .trust-strip .flag {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .trust-strip strong {
+            color: #1a324a;
+            font-weight: 600;
+        }
+
+        /* Form styling */
+        .form-section {
+            background: #f9fcff;
+            padding: 1.8rem 2rem 2rem;
+            border-radius: 20px;
+            border: 1px solid #dce5ef;
+            margin-top: 0.5rem;
+        }
+        .form-section h2 {
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            color: #0b1a2f;
+        }
+        .form-section p {
+            color: #2c475f;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: #1a324a;
+        }
+        input, textarea {
+            width: 100%;
+            max-width: 480px;
+            padding: 0.7rem 1rem;
+            border: 1px solid #cbd8e8;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #2a7de1;
+            box-shadow: 0 0 0 3px rgba(42, 125, 225, 0.15);
+        }
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+        button {
+            background: #1a3d6b;
+            color: white;
+            border: none;
+            padding: 0.75rem 2.8rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 0.25rem;
+        }
+        button:hover {
+            background: #0f2c4a;
+        }
+        button:active {
+            transform: scale(0.97);
+        }
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #5b738b;
+            border-top: 1px solid #e6edf5;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        /* video wrapper */
+        .video-wrapper {
+            margin: 0.5rem 0 0.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #eef3f9;
+        }
+        .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: 0;
+        }
+        .video-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a324a;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== Inline image styles ===== */
+        .img-float-right {
+            float: right;
+            width: 260px;
+            max-width: 40%;
+            margin: 0.3rem 0 1rem 1.4rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+            display: block;
+        }
+        .img-float-left {
+            float: left;
+            width: 260px;
+            max-width: 40%;
+            margin: 0.3rem 1.4rem 1rem 0;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+            display: block;
+        }
+        .img-float-center {
+            display: block;
+            width: 320px;
+            max-width: 60%;
+            margin: 1.2rem auto 1.2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+        }
+        /* Clearfix for sections that contain floated images */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .cta-banner { margin: 1rem -1.5rem 0.6rem; padding: 0.9rem 1.2rem; font-size: 0.92rem; }
+            .trust-strip { margin: 0 -1.5rem 1.8rem; padding: 0.75rem 1.5rem; font-size: 0.85rem; flex-wrap: wrap; }
+            .form-section { padding: 1.5rem; }
+            .img-float-right,
+            .img-float-left {
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin: 0.8rem 0 1.2rem;
+            }
+            .img-float-center {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <h1>SS-31 (Elamipretide) – Mitochondrial Peptide</h1>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+        <span class="cta-icon">💰</span>
+        <span>High-quality Peptides SS-31 don't have to break the bank. We offer bulk pricing, even for 1-gram packages. <a href="#contact-form">Contact us today</a> for pricing and availability.</span>
+    </div>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <span class="flag">🇺🇸</span>
+        <span><strong>USA-Based. Customer-Focused.</strong> We're proud to be based in the United States, offering fast communication, reliable service, and dedicated support to customers nationwide.</span>
+    </div>
+
+    <!-- INTRO -->
+    <div class="clearfix">
+        <img src="ss31.png" alt="SS-31 peptide" class="img-float-right">
+        <p><strong>SS-31</strong> (also known as <strong>Elamipretide</strong>) is an experimental peptide designed to target mitochondria — the energy-producing structures inside our cells.</p>
+        <p>Developed as part of a new class of therapeutics called <strong>mitochondria-targeted peptides</strong>, SS-31 represents a novel approach to addressing cellular energy deficits at their source rather than merely managing symptoms.</p>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <h2>How it works</h2>
+    <div class="clearfix">
+        <img src="ss31-structure.jpg" alt="SS-31 chemical structure" class="img-float-left">
+        <p>SS-31 binds to <strong>cardiolipin</strong>, a specialised lipid found in the inner mitochondrial membrane. Researchers believe this interaction may:</p>
+        <ul>
+            <li><strong>Improve mitochondrial energy production (ATP)</strong></li>
+            <li><strong>Reduce oxidative stress</strong> inside cells</li>
+            <li><strong>Protect cells</strong> from damage</li>
+            <li><strong>Enhance cellular function</strong> in tissues with high energy demands (heart, brain, skeletal muscle)</li>
+        </ul>
+        <p>Unlike many compounds that act as broad antioxidants, SS-31 is selective — it concentrates precisely where mitochondrial damage occurs, potentially offering a more targeted therapeutic effect.</p>
+    </div>
+
+    <!-- WHAT STUDIED FOR -->
+    <h2>What has it been studied for?</h2>
+    <div class="clearfix">
+        <img src="kidney.png" alt="Kidney health" class="img-float-right">
+        <p>SS-31 has been investigated in clinical and preclinical research for a range of conditions, including:</p>
+        <ul>
+            <li>Heart failure and cardiac dysfunction</li>
+            <li>Mitochondrial diseases</li>
+            <li>Kidney disease (including CKD)</li>
+            <li>Muscle fatigue and exercise intolerance</li>
+            <li>Age-related eye diseases</li>
+        </ul>
+    </div>
+
+    <!-- FDA APPROVAL (HIGHLIGHT) -->
+    <h2>Is it FDA approved?</h2>
+    <div class="highlight-box clearfix">
+        <img src="fda-approved.jpg" alt="FDA approval" class="img-float-right">
+        <strong>✅ Yes – as of September 19, 2025</strong>, the U.S. Food and Drug Administration granted <strong>accelerated approval</strong> to elamipretide, marketed as <strong>Forzinity™</strong>, for the treatment of <strong>Barth syndrome</strong> in adults and children weighing at least 30 kg.
+        <br><br>
+        This marks the <strong>first FDA-approved treatment</strong> for Barth syndrome and the <strong>first therapy</strong> directly targeting mitochondrial cardiolipin.
+    </div>
+
+    <!-- WHY PEOPLE ARE INTERESTED -->
+    <h2>Why are people interested in it?</h2>
+    <div class="clearfix">
+        <img src="health.png" alt="Health and longevity" class="img-float-right">
+        <p>SS-31 has gained attention in <strong>longevity and biohacking</strong> communities because mitochondrial dysfunction is thought to play a central role in aging and many chronic diseases, including chronic kidney disease (CKD).</p>
+        <p><strong>However</strong>, it's important to note that many claims made online go well beyond what has been proven in rigorous human studies. Always interpret with caution and rely on peer-reviewed research.</p>
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <p class="video-title">Get insights from professionals in this short video</p>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="SS-31 overview video" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <hr>
+
+    <!-- FORMPREE CONTACT FORM -->
+    <div class="form-section" id="contact-form">
+        <h2>Request a Quote</h2>
+        <p>Interested in our products or bulk orders?<br>Leave your email and a short message to receive product information, pricing, and customized solutions from our team.</p>
+
+        <form action="https://formspree.io/f/xojoaboa" method="POST">
+            <div class="form-group">
+                <label for="email">Your email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Any questions or comments…"></textarea>
+            </div>
+            <button type="submit">Send message</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-note">
+        This is an informational page – always consult a qualified healthcare professional before considering any investigational compound.
+    </div>
+
+</div>
+</body>
+</html>
