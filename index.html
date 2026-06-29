@@ -192,20 +192,18 @@
             padding-top: 1.5rem;
             text-align: center;
         }
-        /* video wrapper */
+
+        /* ===== Video wrapper (local video) ===== */
         .video-wrapper {
             margin: 0.5rem 0 0.5rem;
             border-radius: 16px;
             overflow: hidden;
-            background: #eef3f9;
+            background: #0b1a2f;
         }
-        .video-wrapper iframe {
+        .video-wrapper video {
             display: block;
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            border: 0;
+            border-radius: 16px;
         }
         .video-title {
             font-size: 1.05rem;
@@ -345,7 +343,10 @@
     <!-- VIDEO SECTION -->
     <p class="video-title">Get insights from professionals in this short video</p>
     <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/watch?v=IHRDnLQ0YAw" title="SS-31 overview video" allowfullscreen loading="lazy"></iframe>
+        <video controls preload="metadata">
+            <source src="ss-31-professional.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <hr>
